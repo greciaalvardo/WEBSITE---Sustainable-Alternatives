@@ -1,0 +1,90 @@
+﻿@{
+    ViewData["Title"] = "Sundries";
+}
+<h1>@ViewData["Title"]</h1>
+<!DOCTYPE html>
+
+<head>
+    <link href="~/Content/styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<header>
+</header>
+<style>
+    #shampoo {
+        position: relative;
+        background-color: white;
+        border-radius: 25px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        font-family: Garamond, serif;
+        font-size: 16px;
+        padding: 40px 40px;
+        top: 10px
+    }
+    #subtitle {
+        position: relative;
+        font-family: Garamond, serif;
+        font-size: 18px;
+        font-weight: bold;
+        left: 50px;
+        top: 15px;
+    }
+    #pic {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        position: relative;
+        top: 35px;
+        left: 50px;
+        height: 325px;
+        width: 70%;
+    }
+    row{
+        position: relative;
+        top: 15px;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <input id="button" type="button" value="Previous" onclick="@("window.location.href='" + @Url.Action("CommonProducts", "Bathroom") + "'");" />
+        </div>
+        <div class="col d-flex justify-content-center">
+            <input id="button" type="button" value="Next" onclick="@("window.location.href='" + @Url.Action("Dental", "Bathroom") + "'");" />
+        </div>
+    </div>
+    <p></p>
+    <div class="row">
+        <div class="col">
+            <header id="subtitle">Toilet Paper</header>
+            <img id="pic" src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Bamboo_Toilet_Paper.jpg" class="rounded float-left" alt="Bamboo Toilet Paper">
+        </div>
+        <div class="col">
+            <p id="shampoo">
+                We are not going to tell you to ditch toilet paper. It is important to consider though, that toilet paper is made
+                of paper, which is made from trees, which is why toilet paper accounts for 15% of deforestation on Earth. Toilet paper packaging
+                also contributes a lot to plastic waste. Also important to note is the fact that many toilet papers are processed with chlorine bleach.
+            </p>
+            <p id="shampoo">
+                <bold> Alternative:</bold> There are many bamboo toilet papers on the market that do not contribute to deforestation. However, this option could
+                be more expensive than we are used to. In that case, there are also recycled toilet papers that are commonly wrapped in recylcle material as well!
+            </p>
+        </div>
+    </div>
+    <p></p>
+  <!--  <div class="row">
+        <div class="col">
+            <header id="subtitle"> Trash Bags </header>
+            <img id="pic" src="https://upload.wikimedia.org/wikipedia/commons/3/37/Compostable_trash_bags.png" class="rounded float-left" alt="">
+        </div>
+        <div class="col">
+            <p id="shampoo">
+                When we talk about landfills, we picture piles on piles of filled plastic bags. Almost all of those plastic bags are single-use and when they finally get
+                around to decomposing, they release toxic microplastics into the environment. It is also important to be careful of biodegradable trashbags. If it ends up in a landfill
+                there's point in it being biodegradable because it will not be able to decompose. When these bags degrade, they even release methane gas into our atmosphere.
+            </p>
+            <p id="shampoo">
+                <bold> Alternative:</bold> There is no perfect alternative for trashbags that end up in a landfill. There are only slightly better options, such as compostable trashbags.
+                Although these will also take longer to degrade in a traditional landfill, they will undergo the process much faster than the typical plastic bags. And when they do begin to compost,
+                they will not release toxic chemicals or microplastics but instead benefit the soil.
+        </div>
+    </div> -->
+</div>

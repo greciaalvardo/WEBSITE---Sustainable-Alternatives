@@ -1,0 +1,85 @@
+﻿@{
+    ViewData["Title"] = "Wraps and Storage";
+}
+<h1>@ViewData["Title"]</h1>
+<!DOCTYPE html>
+<head>
+    <link href="~/Content/styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<header>
+</header>
+<style>
+    #shampoo {
+        position: relative;
+        background-color: white;
+        border-radius: 25px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        font-family: Garamond, serif;
+        font-size: 16px;
+        padding: 40px 40px;
+        top: 20px
+    }
+
+    #subtitle {
+        position: relative;
+        font-family: Garamond, serif;
+        font-size: 18px;
+        font-weight: bold;
+        left: 50px;
+        top: 15px;
+    }
+
+    #pic {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        position: relative;
+        top: 35px;
+        left: 50px;
+        height: 325px;
+        width: 70%;
+    }
+
+    row {
+        position: relative;
+        top: 15px;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <input id="button" type="button" value="Return" onclick="@("window.location.href='" + @Url.Action("Kitchen", "Home") + "'");" />
+        </div>
+        <div class="col d-flex justify-content-center">
+            <input id="button" type="button" value="Next" onclick="@("window.location.href='" + @Url.Action("Cleaning", "Kitchen") + "'");" />
+        </div>
+    </div>
+    <p></p>
+    <div class="row">
+        <div class="col">
+            <header id="subtitle">Grocery Bags</header>
+            <img id="pic" src="https://images.unsplash.com/photo-1584473457406-6240486418e9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80" width="387" height="580" class="rounded float-left" alt="Grocery Bags">
+        </div>
+        <div class="col">
+            <p id="shampoo">
+                When grocery shopping, plastic bags are used then thrown away where they accumulate in the trash or wind up in our oceans. <br />
+                Reusable grocery bags are a way to store your items while remaining environmentally friendly.
+            </p>
+        </div>
+    </div>
+    <p>
+        <br /><br /><br />
+    </p>
+    <p></p>
+    <div class="row">
+        <div class="col">
+            <header id="subtitle">Reusable Containers</header>
+            <img id="pic" src="https://images.unsplash.com/photo-1606859191214-25806e8e2423?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=835&q=80" width="835" height="580" class="rounded float-left" alt="Tupperware">
+        </div>
+        <div class="col">
+            <p id="shampoo">
+                When it comes to food storage, one way to help out the environment is by using tupperware or reusable containers. These containers will keep your food fresh just as well as plastic ziploc bags or plastic wrap.<br />
+                This will help reduce the disposal of plastic storage wraps that can find its way into our oceans and harm wildlife. This is one of the simpler sustainable alternatives since it just requires a one time switch from buying ziploc bags constantly to one purchase of a set of food containers. 
+            </p>
+        </div>
+    </div>
+</div>

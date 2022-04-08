@@ -1,0 +1,99 @@
+﻿@{
+    ViewData["Title"] = "Styling Tools";
+}
+<h1>@ViewData["Title"]</h1>
+<!DOCTYPE html>
+
+<head>
+    <link href="~/Content/styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    button {
+        list-style: none;
+    }
+</style>
+<header>
+</header>
+
+<style>
+    #shampoo {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        position: relative;
+        background-color: white;
+        border-radius: 25px;
+        font-family: Garamond, serif;
+        font-size: 16px;
+        padding: 40px 40px;
+        top: 10px
+    }
+
+    #subtitle {
+        position: relative;
+        font-family: Garamond, serif;
+        font-size: 18px;
+        font-weight: bold;
+        left: 50px;
+        top: 15px;
+    }
+
+    #pic {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        position: relative;
+        top: 35px;
+        left: 50px;
+        height: 325px;
+        width: 70%;
+    }
+    row {
+        position: relative;
+        top: 15px;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <input id="button" type="button" value="Previous" onclick="@("window.location.href='" + @Url.Action("Dental", "Bathroom") + "'");" />
+        </div>
+        <div class="col d-flex justify-content-center">
+            <input id="button" type="button" value="Return" onclick="@("window.location.href='" + @Url.Action("Bath", "Home") + "'");" />
+        </div>
+    </div>
+    <p></p>
+    <p></p>
+    <p></p>
+    <div class="row">
+        <div class="col">
+            <header id="subtitle"> Hairbrushes and Combs</header>
+            <img id="pic" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Bamboo_hairbrush.jpg" class="rounded float-left" alt="Wooden Hairbrush">
+        </div>
+        <div class="col">
+            <p id="shampoo">
+                The problem with many hairbrushes and combs is that they are not plastic free. They are massed produced with
+                cheap materials, requiring them to be thrown out and replaced frequently. Hair brushes made with plastic are not recyclable.
+            </p>
+            <p id="shampoo">
+                <bold> Alternative:</bold> The best alternatives to plastic brushes are wooden or bamboo brushes. However, watch out
+                for products made of malamine bamboo - these simply melamine plastic embedded with bamboo fibers. Always read packaging carefully.
+            </p>
+        </div>
+    </div>
+    <p></p>
+    <p></p>
+    <p></p>
+  <!--  <div class="row">
+        <div class="col">
+            <header id="subtitle"> Hairstyling Tools. </header>
+            <img id="pic" src="..." class="rounded float-left" alt="...">
+        </div>
+        <div class="col">
+            <p id="shampoo">
+                why its bad
+            </p>
+            <p id="shampoo">
+                <bold> Alternative:</bold> tbd (water methods? overnight curls?)
+            </p>
+        </div>
+    </div> -->
+</div>

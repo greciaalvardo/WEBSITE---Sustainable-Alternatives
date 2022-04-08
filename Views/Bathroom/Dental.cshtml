@@ -1,0 +1,91 @@
+﻿@{
+    ViewData["Title"] = "Dental";
+}
+<h1>@ViewData["Title"]</h1>
+<!DOCTYPE html>
+
+<head>
+    <link href="~/Content/styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<header>
+</header>
+<style>
+    #shampoo {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        position: relative;
+        background-color: white;
+        border-radius: 25px;
+        font-family: Garamond, serif;
+        font-size: 16px;
+        padding: 40px 40px;
+        top: 10px
+    }
+
+    #subtitle {
+        position: relative;
+        font-family: Garamond, serif;
+        font-size: 18px;
+        font-weight: bold;
+        left: 50px;
+        top: 15px;
+    }
+
+    #pic {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        position: relative;
+        top: 35px;
+        left: 50px;
+        height: 325px;
+        width: 70%;
+    }
+    row {
+        position: relative;
+        top: 15px;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <input id="button" type="button" value="Previous" onclick="@("window.location.href='" + @Url.Action("Sundries", "Bathroom") + "'");" />
+        </div>
+        <div class="col d-flex justify-content-center">
+            <input id="button" type="button" value="Next" onclick="@("window.location.href='" + @Url.Action("Styling", "Bathroom") + "'");" />
+        </div>
+    </div>
+    <p></p>
+    <p></p>
+    <div class="row">
+        <div class="col">
+            <header id="subtitle"> Toothpaste</header>
+            <img id="pic" src="https://upload.wikimedia.org/wikipedia/commons/6/61/Toothpaste.png" class="rounded float-left" alt="Toothpaste Tablets">
+        </div>
+        <div class="col">
+            <p></p>
+            <p id="shampoo">
+                A billion toothpaste containers end up in landfills every year - imagine all the plastic waste! Aside from this,
+                harmful chemicals in our toothpastes easily end up in bodies of water through our drains.
+            </p>
+            <p id="shampoo">
+                <bold> Alternative:</bold> There are a couple of good alternatives. The first is to use toothpaste stored in eco-friendly
+                packaging, like one that is recyclable in reusable glass cars or sugar-cane material. The second option is to try toothpaste tablets! This option will reduce
+                your use of water and they dissolve completely!
+            </p>
+        </div>
+    </div>
+    <p></p>
+  <!--  <div class="row">
+        <div class="col">
+            <header id="subtitle"> Toothbrushes </header>
+            <img id="pic" src="..." class="rounded float-left" alt="...">
+        </div>
+        <div class="col">
+            <p id="shampoo">
+                why its bad
+            </p>
+            <p id="shampoo">
+                <bold> Alternative:</bold> tbd
+        </div>
+    </div> -->
+</div>

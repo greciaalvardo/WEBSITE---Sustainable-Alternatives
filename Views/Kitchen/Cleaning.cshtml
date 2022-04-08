@@ -1,0 +1,92 @@
+﻿@{
+    ViewData["Title"] = "Cleaning";
+}
+<h1>@ViewData["Title"]</h1>
+<!DOCTYPE html>
+<head>
+    <link href="~/Content/styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<header>
+
+</header>
+<style>
+    #shampoo {
+        position: relative;
+        background-color: white;
+        border-radius: 25px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        font-family: Garamond, serif;
+        font-size: 16px;
+        padding: 40px 40px;
+        top: 20px
+    }
+
+    #subtitle {
+        position: relative;
+        font-family: Garamond, serif;
+        font-size: 18px;
+        font-weight: bold;
+        left: 50px;
+        top: 15px;
+    }
+
+    #pic {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        position: relative;
+        top: 35px;
+        left: 50px;
+        height: 325px;
+        width: 70%;
+    }
+
+    row {
+        position: relative;
+        top: 15px;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <input id="button" type="button" value="Previous" onclick="@("window.location.href='" + @Url.Action("WrapsAndStorages", "Kitchen") + "'");" />
+        </div>
+        <div class="col d-flex justify-content-center">
+            <input id="button" type="button" value="Next" onclick="@("window.location.href='" + @Url.Action("Kitchenware", "Kitchen") + "'");" />
+        </div>
+    </div>
+    <p></p>
+
+    <div class="row">
+        <div class="col">
+            <header id="subtitle">Dish Towels</header>
+            <img id="pic" src="https://images.unsplash.com/photo-1591625591034-75d303d2e1a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" width="387" height="581" class="rounded float-left" alt="Dish Towels">
+        </div>
+        <div class="col">
+            <p id="shampoo">
+                One easy sustainable switch when it comes to cleaning your kitchen is the use of dish towels. <br />
+                Reusable dish towels can be washed after every use which will cut out the need for any paper towels and napkins. <br />
+                It might not be a big change but it is a start.
+                Paper towels might leave a small carbon footprint but it does contribute to other environmental issues such as deforestation and increasing our world's waste problem.
+            </p>
+      
+        </div>
+    </div>
+    <p></p>
+    <p>
+        <br /><br /><br />
+    </p>
+    <div class="row">
+        <div class="col">
+            <header id="subtitle">Cleaning Supplies</header>
+            <img id="pic" src="https://images.unsplash.com/photo-1583907659441-addbe699e921?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" width="1074" height="806" class="rounded float-left" alt="Cleaning Supplies">
+        </div>
+        <div class="col">
+            <p id="shampoo">
+                Another great way to add sustainable cleaning into your life is to learn how to make homemade and effective cleaning products. One simple example is a lemon scented all=purpose cleaner.<br />
+                By using only four everyday ingredients you have a cleaning product that eliminates the need for buying more plastic products. For this cleaner all you need is: vinegar, baking soda, warm water, and a single lemon. <br />
+                This reduces the countless cleaning supplies you buy yearly to just one reusable spray bottle that contains a cheap cleaning alternative.
+            </p>
+            <p></p>
+        </div>
+        </div>
+  </div>

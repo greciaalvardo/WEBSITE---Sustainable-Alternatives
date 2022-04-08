@@ -1,0 +1,115 @@
+﻿@{
+    ViewData["Title"] = "Bath";
+}
+<h1>@ViewData["Title"]</h1>
+<!DOCTYPE html>
+
+<head>
+    <link href="~/Content/styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    div.polaroid {
+        width: 90%;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-bottom: 25px;
+    }
+
+    #box {
+        background-color: white;
+        font-family: Garamond, serif;
+        font-size: 18px;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    #box2 {
+        background-color: white;
+        font-family: Garamond, serif;
+        font-size: 18px;
+        text-align: center;
+        padding: 46px 20px;
+    }
+
+    #box3 {
+        background-color: white;
+        font-family: Garamond, serif;
+        font-size: 18px;
+        text-align: center;
+        padding: 48px 20px;
+    }
+    #button {
+        background-color: #94A899;
+        border-radius: 25px;
+        font-family: Garamond, serif;
+        font-size: 16px;
+        text-align: center;
+        height: 40px;
+        width: 150px;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm">
+            <div class="polaroid">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Pmv-chamara-OXYOFT9gTOE-unsplash.jpg" alt="Common Products" style="width:100%">
+                <div class="caption">
+                    <header id="box2">
+                        Common Products
+                        <button id="button">Quick Details</button>
+                        <input id="button" type="button" value="Learn Alternatives" onclick="@("window.location.href='" + @Url.Action("CommonProducts", "Bathroom") + "'");" />
+                    </header>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm">
+            <div class="polaroid">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Claire-mueller-3HoHDoFL5gM-unsplash.jpg" alt="Sundries" style="width:100%">
+                    <div class="caption">
+                        <header id="box">
+                            Sundries        
+                            <button id="button">Quick Details</button>
+                            <input id="button" type="button" value="Learn Alternatives" onclick="@("window.location.href='" + @Url.Action("Sundries", "Bathroom") + "'");" />
+                        </header>
+                    </div>
+            </div>
+        </div>
+
+        <div class="col-sm">
+            <div class="polaroid">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Shali-kj1A3wta7qY-unsplash.jpg" alt="Dental" style="width:100%">
+                    <div class="caption">
+                        <header id="box3">
+                            Dental          
+                            <button id="button">Quick Details</button>
+                            <input id="button" type="button" value="Learn Alternatives" onclick="@("window.location.href='" + @Url.Action("Dental", "Bathroom") + "'");" />
+                        </header>
+                    </div>
+            </div>
+        </div>
+
+        <div class="col-sm">
+            <div class="polaroid">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Shari-sirotnak-oM5YoMhTf8E-unsplash.jpg" alt="Styling" style="width:100%">
+                <div class="caption">
+                    <header id="box">
+                        Styling
+                        <button id="button">Quick Details</button>
+                        <input id="button" type="button" value="Learn Alternatives" onclick="@("window.location.href='" + @Url.Action("Styling", "Bathroom") + "'");" />
+                    </header>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+<script>
+  /**  function showProducts() {
+        document.getElementById("productsBox").style.display = 'block';
+     } */
+</script>

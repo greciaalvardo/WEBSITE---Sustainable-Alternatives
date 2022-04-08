@@ -1,0 +1,76 @@
+﻿@{
+    ViewData["Title"] = "Flora";
+}
+<h1>@ViewData["Title"]</h1>
+<!DOCTYPE html>
+<head>
+    <link href="~/Content/styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<header>
+</header>
+<style>
+    #shampoo {
+        position: relative;
+        background-color: white;
+        border-radius: 25px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        font-family: Garamond, serif;
+        font-size: 16px;
+        padding: 40px 40px;
+        top: 20px
+    }
+
+    #subtitle {
+        position: relative;
+        font-family: Garamond, serif;
+        font-size: 18px;
+        font-weight: bold;
+        left: 50px;
+        top: 15px;
+    }
+
+    #pic {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        position: relative;
+        top: 35px;
+        left: 50px;
+        height: 325px;
+        width: 70%;
+    }
+
+    row {
+        position: relative;
+        top: 15px;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <input id="button" type="button" value="Previous" onclick="@("window.location.href='" + @Url.Action("OrganicFarmingComposting", "Garden") + "'");" />
+        </div>
+        <div class="col d-flex justify-content-center">
+            <input id="button" type="button" value="Next" onclick="@("window.location.href='" + @Url.Action("WaterConservation", "Garden") + "'");" />
+        </div>
+    </div>
+    <p></p>
+    <div class="row">
+        <div class="col">
+            <header id="subtitle"> Native Plants </header>
+            <img id="pic" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Native_plant.jpg" class="rounded float-left" alt="">
+        </div>
+        <div class="col">
+            <p id="shampoo">
+                When planting a garden, make sure there are no invasive plants. Invasive plants reduce biodiversity as they are a threat to the local ecosystem. They can kill off native plants,
+                and therefore even kill off the native animals of the area.
+            </p>
+            <p id="shampoo">
+                <bold> Alternative:</bold> It is important that you know what plants are native to your area. Big-name stores are not ideal to buy plants from if you're unsure of what plants are
+                native to your area, as they are not prioritizing selling different plants in specific stores. A good place to start would be to check out small local nursuries.
+                If you would like to learn which plants are native to your area, you can do a quick google search of which region of your state you are in or look
+                <a href="https://nativebackyards.com/native-plants-by-state/">here.</a>
+            </p>
+        </div>
+    </div>
+    <p></p>
+</div>

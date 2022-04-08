@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SustainableAlternatives</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <style>
+            #headerBox {
+                height: 80px;
+                background-color: #94A899;
+                z-index: 0;
+                font-family: Garamond, serif;
+                position: relative;
+            }
+            nav {
+                margin: 27px auto 0;
+                top:-50px;
+                position: relative;
+                width: 670px;
+                height: 50px;
+                background-color: #687865;
+                border-radius: 8px;
+                font-size: 0;
+                box-shadow: 0 8px 6px -6px black;
+            }
+
+                nav a {
+                    line-height: 50px;
+                    height: 100px;
+                    font-size: 15px;
+                    display: inline-block;
+                    position: relative;
+                    z-index: 2;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    text-align: center;
+                    color: white;
+                    cursor: pointer;
+                }
+
+                nav .animation {
+                    position: absolute;
+                    height: 100%;
+                    top: 0;
+                    z-index: 1;
+                    transition: all .5s ease 0s;
+                    border-radius: 8px;
+                }
+
+            a:nth-child(1) {
+                font-size: 15px;
+                width: 115px;
+            }
+
+            a:nth-child(2) {
+                font-size: 15px;
+                width: 130px;
+            }
+
+            a:nth-child(3) {
+                width: 115px;
+            }
+
+            a:nth-child(4) {
+                width: 170px;
+            }
+
+            a:nth-child(5) {
+                width: 125px;
+            }
+
+            nav .start-home, a:nth-child(1):hover ~ .animation {
+                width: 110px;
+                left: 0;
+                background-color: #97b09f;
+            }
+
+            nav .start-about, a:nth-child(2):hover ~ .animation {
+                width: 120px;
+                left: 115px;
+                background-color: #97b09f;
+            }
+
+            nav .start-garden, a:nth-child(3):hover ~ .animation {
+                width: 110px;
+                left: 245px;
+                background-color: #97b09f;
+            }
+
+            nav .start-kitchen, a:nth-child(4):hover ~ .animation {
+                width: 155px;
+                left: 365px;
+                background-color: #97b09f;
+            }
+
+            nav .start-bath, a:nth-child(5):hover ~ .animation {
+                width: 150px;
+                left: 520px;
+                background-color: #97b09f;
+            }
+
+            body {
+                font-size: 12px;
+                font-family: sans-serif;
+                background: #edf2ef;
+            }
+        </style>
+
+        <div class="jumbotron text-center" id="headerBox">
+            <h1 style="font-weight:bold">SustainableAlternatives</h1>
+        </div>
+        <nav>
+            <a class="navbar-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            <a class="navbar-link" asp-area="" asp-controller="Home" asp-action="About">About</a>
+            <a class="navbar-link" asp-area="" asp-controller="Home" asp-action="Garden">Garden</a>
+            <a class="navbar-link" asp-area="" asp-controller="Home" asp-action="Kitchen">Kitchen</a>
+            <a class="navbar-link" asp-area="" asp-controller="Home" asp-action="Bath">Bath</a>
+            <div class="animation start-home"></div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - SustainableAlternatives
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,72 @@
+﻿@{
+    ViewData["Title"] = "Organic Farming and Composting";
+}
+<h1>@ViewData["Title"]</h1>
+<!DOCTYPE html>
+<head>
+    <link href="~/Content/styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<header>
+</header>
+<style>
+    #shampoo {
+        position: relative;
+        background-color: white;
+        border-radius: 25px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        font-family: Garamond, serif;
+        font-size: 16px;
+        padding: 40px 40px;
+        top: 20px
+    }
+
+    #subtitle {
+        position: relative;
+        font-family: Garamond, serif;
+        font-size: 18px;
+        font-weight: bold;
+        left: 50px;
+        top: 15px;
+    }
+
+    #pic {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        position: relative;
+        top: 35px;
+        left: 50px;
+        height: 325px;
+        width: 70%;
+    }
+
+    row {
+        position: relative;
+        top: 15px;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <input id="button" type="button" value="Previous" onclick="@("window.location.href='" + @Url.Action("ToolsAndPesticides", "Garden") + "'");" />
+        </div>
+        <div class="col d-flex justify-content-center">
+            <input id="button" type="button" value="Next" onclick="@("window.location.href='" + @Url.Action("Flora", "Garden") + "'");" />
+        </div>
+    </div>
+    <p></p>
+    <div class="row">
+        <div class="col">
+            <header id="subtitle">Organic Mulch</header>
+            <img id="pic" src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Organic_mulch.jpg" class="rounded float-left" alt="Bamboo Toilet Paper">
+        </div>
+        <div class="col">
+            <p id="shampoo">
+                Making an organic mulch is a cost-effective option and a good way to reduce waste at home. A healthy mulch also requires less water as they retain moisture better.
+                You can gather fallen leaves and branches instead of gathering them in plastic bags. Our kitchens are also home to a lot of good compost materials. Fruit and vegatable
+                peels, eggshells, and bread are good exmaples. Be careful of using fruits with high acidity or fruits that have already become infested with bugs as this would be introduced
+                into your mulch.
+            </p>
+        </div>
+    </div>
+    <p></p>
+</div>

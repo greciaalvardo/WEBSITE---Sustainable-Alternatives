@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "Kitchenware";
+}
+<h1>@ViewData["Title"]</h1>
+<!DOCTYPE html>
+<head>
+    <link href="~/Content/styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<header>
+</header>
+<style>
+    #shampoo {
+        position: relative;
+        background-color: white;
+        border-radius: 25px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        font-family: Garamond, serif;
+        font-size: 16px;
+        padding: 40px 40px;
+        top: 20px
+    }
+
+    #subtitle {
+        position: relative;
+        font-family: Garamond, serif;
+        font-size: 18px;
+        font-weight: bold;
+        left: 50px;
+        top: 15px;
+    }
+
+    #pic {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        position: relative;
+        top: 35px;
+        left: 50px;
+        height: 325px;
+        width: 70%;
+    }
+
+    row {
+        position: relative;
+        top: 15px;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <input id="button" type="button" value="Previous" onclick="@("window.location.href='" + @Url.Action("Cleaning", "Kitchen") + "'");" />
+        </div>
+        <div class="col d-flex justify-content-center">
+            <input id="button" type="button" value="Next" onclick="@("window.location.href='" + @Url.Action("ProduceAndIngredients", "Kitchen") + "'");" />
+        </div>
+    </div>
+    <p></p>
+    <div class="row">
+        <div class="col">
+            <header id="subtitle">Reusable Water Bottle</header>
+            <img id="pic" src="https://images.unsplash.com/photo-1589365278144-c9e705f843ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80" width="387" height="580" class="rounded float-left" alt="Bottle">
+        </div>
+        <div class="col">
+            <p id="shampoo">
+               Sustainability can be found in many kitchenwares that will not only help the environment but it will also save you money.<br />
+                The first option there is a reusable water bottle. Eighty percent of plastic water bottles end up in landfills. They also release toxic chemicals as they decompose.<br />
+                A great way to tackle this environmental issue is to buy a reusable water bottle such as the one shown to the left. 
+            </p>
+        </div>
+    </div>
+    <p></p>
+</div>

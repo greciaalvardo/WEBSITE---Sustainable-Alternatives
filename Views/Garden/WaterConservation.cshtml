@@ -1,0 +1,89 @@
+﻿@{
+    ViewData["Title"] = "Water Conservation";
+}
+<h1>@ViewData["Title"]</h1>
+<!DOCTYPE html>
+<head>
+    <link href="~/Content/styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<header>
+</header>
+<style>
+    #shampoo {
+        position: relative;
+        background-color: white;
+        border-radius: 25px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        font-family: Garamond, serif;
+        font-size: 16px;
+        padding: 30px 40px;
+        top: 50px
+    }
+
+    #subtitle {
+        position: relative;
+        font-family: Garamond, serif;
+        font-size: 18px;
+        font-weight: bold;
+        left: 50px;
+        top: 15px;
+    }
+
+    #pic {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        position: relative;
+        top: 35px;
+        left: 50px;
+        height: 325px;
+        width: 70%;
+    }
+
+    row {
+        position: relative;
+        top: 20px;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <input id="button" type="button" value="Previous" onclick="@("window.location.href='" + @Url.Action("Flora", "Garden") + "'");" />
+        </div>
+        <div class="col d-flex justify-content-center">
+            <input id="button" type="button" value="Return" onclick="@("window.location.href='" + @Url.Action("Garden", "Home") + "'");" />
+        </div>
+    </div>
+    <p></p>
+    <div class="row">
+        <div class="col">
+            <header id="subtitle">Low Water Plants</header>
+            <img id="pic" src="https://upload.wikimedia.org/wikipedia/commons/3/38/Low_water_plant.jpg" class="rounded float-left" alt="Low Water Plant">
+        </div>
+        <div class="col">
+            <p id="shampoo">
+                Conserve water with low-water plants! Opt for succulents or drought-resistant plants. Find a good list of vibrant flora <a href="https://www.sunset.com/garden/flowers-plants/water-wise-plants#low-water-plants_2">here.</a>
+            </p>
+        </div>
+    </div>
+    <p></p>
+    <p></p>
+    <p></p>
+    <div class="row">
+        <div class="col">
+            <header id="subtitle"> Watering Habits </header>
+            <img id="pic" src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Saving_water.jpg" class="rounded float-left" alt="Irrigation">
+        </div>
+        <div class="col">
+            <p id="shampoo">
+                In areas that do not get a lot of rain, it is important to conserve water as much as possible. One good practice is to water your plants outside
+                of peak sun hour and targeting the roots of the plant only. If you live in a dry climate, watering your plants during harsh sunlight will lead to the water being evaporated and limit our water
+                supply even further. Saving water at home also means taking less from natural bodies of water.
+            </p>
+            <p id="shampoo">
+                <bold> Alternative:</bold> Instead of watering lightly every day or so, water your garden heavily at night. Good watering practice is watering everytime soil is dry
+                about two to four inches deep from the surface. Consider using a good mulch (organic, too - if possible), as mulch helps to retain water in the soil. Investing in
+                an adjustable sprinkler is also a good idea as you can move it to different target areas in your garden.
+                </p>
+        </div>
+    </div>
+</div>

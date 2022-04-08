@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "About Page";
+}
+<h1>@ViewData["Title"]</h1>
+<!DOCTYPE html>
+
+<head>
+    <link href="~/Content/styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<header>
+</header>
+<style>
+    #shampoo {
+        position: relative;
+        background-color: white;
+        border-radius: 25px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        font-family: Garamond, serif;
+        font-size: 16px;
+        padding: 40px 40px;
+        top: 20px
+    }
+
+    #subtitle {
+        position: relative;
+        font-family: Garamond, serif;
+        font-size: 18px;
+        font-weight: bold;
+        left: 50px;
+        top: 15px;
+    }
+
+    #pic {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        position: relative;
+        top: 35px;
+        left: 50px;
+        height: 325px;
+        width: 70%;
+    }
+
+    row {
+        position: relative;
+        top: 15px;
+    }
+</style>
+<div class="row">
+    <div class="col">
+        <img id="pic" src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" width="1074" height="806" class="rounded float-left" alt="Bottle">
+    </div>
+    <div class="col">
+        <p id="shampoo">
+            Each year, over 300 million tons of plastic is produced. Approximately 5-% of this plastic is from the use of
+            single-use items such as coffee cups, paper towels, cleaning supply bottles, and other everyday items that can
+            be found in the common household. Plastic pollution takes a huge toll on our environment especially our wildlife.
+            An article from "The Center of Biological Diversity" states that plastic pollution has gotten so huge that 'plastic will soon outweight all the fish in the sea'.
+            This environmental issue threatens not only our wildlife but also our ocean health, food safety, and climate.
+            
+        </p>
+    </div>
+</div>
+
+<p><br /><br /><br /><br /></p>
+
+<div class="row">
+    <div class="col">
+        <header id="subtitle">About the Creators</header>
+        <img id="pic" src="https://images.unsplash.com/photo-1506782081254-09bcfd996fd6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80" width="387" height="600" class="rounded float-left" alt="Bottle">
+    </div>
+    <div class="col">
+        <p id="shampoo">
+            Three friends with different computing backgrounds have come together to tackle an issue that has effected us all - pollution!
+            We believe strongly in this cause because the worse impacts of climate change could be irreversible by 2030.
+            Environmental issues have always been a problem since as long as we can remember, it has gotten worse in the past 20 years.
+            We have felt an increase of urgency to make a change and becoming more sustainable can take us as a society one step closer to a safer and healthier tomorrow!
+           </p>
+    </div>
+</div>
+<p><br /><br /><br /></p>

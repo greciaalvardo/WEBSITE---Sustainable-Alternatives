@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Produce and Ingredients";
+}
+<h1>@ViewData["Title"]</h1>
+<!DOCTYPE html>
+<head>
+    <link href="~/Content/styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<header>
+</header>
+<style>
+    #shampoo {
+        position: relative;
+        background-color: white;
+        border-radius: 25px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        font-family: Garamond, serif;
+        font-size: 16px;
+        padding: 40px 40px;
+        top: 20px
+    }
+
+    #subtitle {
+        position: relative;
+        font-family: Garamond, serif;
+        font-size: 18px;
+        font-weight: bold;
+        left: 50px;
+        top: 15px;
+    }
+
+    #pic {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        position: relative;
+        top: 35px;
+        left: 50px;
+        height: 325px;
+        width: 70%;
+    }
+
+    row {
+        position: relative;
+        top: 15px;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <input id="button" type="button" value="Previous" onclick="@("window.location.href='" + @Url.Action("Kitchenware", "Kitchen") + "'");" />
+        </div>
+        <div class="col d-flex justify-content-center">
+            <input id="button" type="button" value="Return" onclick="@("window.location.href='" + @Url.Action("Kitchen", "Home") + "'");" />
+        </div>
+    </div>
+    <p></p>
+    <div class="row">
+        <div class="col">
+            <header id="subtitle">Local Grocery Shopping</header>
+            <img id="pic" src="https://images.unsplash.com/photo-1570913196376-dacb677ef459?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" width="870" height="580" class="rounded float-left" alt="Grocerys">
+        </div>
+        <div class="col">
+            <p id="shampoo">
+                Shopping locally can not only help you find better produce but it also supports your local farmers. This helps you to shop and eat more mindfully which can be better for your health and your wallet.<br />
+                Local shopping also allows you to buy seasonal fruits and vegetables which tells you that they were not imported. Reducing the demand for imported foods will help reduce the amount of energy used to transport and store the food.
+            </p>
+        </div>
+    </div>
+    <p></p>
+</div>

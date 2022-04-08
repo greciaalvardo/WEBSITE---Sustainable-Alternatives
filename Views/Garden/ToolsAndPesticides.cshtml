@@ -1,0 +1,91 @@
+﻿@{
+    ViewData["Title"] = "Tools and Pesticides";
+}
+<h1>@ViewData["Title"]</h1>
+<!DOCTYPE html>
+<head>
+    <link href="~/Content/styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<header>
+</header>
+<style>
+    #shampoo {
+        position: relative;
+        background-color: white;
+        border-radius: 25px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        font-family: Garamond, serif;
+        font-size: 16px;
+        padding: 40px 40px;
+        top: 20px
+    }
+
+    #subtitle {
+        position: relative;
+        font-family: Garamond, serif;
+        font-size: 18px;
+        font-weight: bold;
+        left: 50px;
+        top: 15px;
+    }
+
+    #pic {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        position: relative;
+        top: 35px;
+        left: 50px;
+        height: 325px;
+        width: 70%;
+    }
+
+    row {
+        position: relative;
+        top: 15px;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <input id="button" type="button" value="Return" onclick="@("window.location.href='" + @Url.Action("Garden", "Home") + "'");" />
+        </div>
+        <div class="col d-flex justify-content-center">
+            <input id="button" type="button" value="Next" onclick="@("window.location.href='" + @Url.Action("OrganicFarmingComposting", "Garden") + "'");" />
+        </div>
+    </div>
+    <p></p>
+    <div class="row">
+        <div class="col">
+            <header id="subtitle">Lawn Mowers</header>
+            <img id="pic" src="https://upload.wikimedia.org/wikipedia/commons/6/67/Ryan-nicoll-Su0SedcyOkQ-unsplash.jpg" class="rounded float-left" alt="Bamboo Toilet Paper">
+        </div>
+        <div class="col">
+            <p id="shampoo">
+                Gasoline-powered lawnmowers are surprisingly large contributers to greenhouse gases. In the United States, 5% of greenhouse gasses come from lawnmowers.
+                A single lawnmower can produce an average of 35 to 100 gallons of carbon dioxide annually.
+            </p>
+            <p id="shampoo">
+                <bold> Alternative:</bold> An electric lawnmower is a more sustainable alternative. They can either be cordless, solar powered, or run with a cord.
+                Not only will this electric-powered lawn mower reduce your carbon footprint, but it will be better for your health and the health of those around you!
+            </p>
+        </div>
+    </div>
+    <p></p>
+    <div class="row">
+        <div class="col">
+            <header id="subtitle"> Pesticides </header>
+            <img id="pic" src="https://upload.wikimedia.org/wikipedia/commons/3/30/Natural_pesticide.jpg" class="rounded float-left" alt="">
+        </div>
+        <div class="col">
+            <p id="shampoo">
+                Pesticides are extremely harmful to the environment as they contaminate our air, soil, water ... the list goes on. They can also cause harm to
+                you and your loved ones. Luckily, there are many DIY pesticides and methods that can get rid of pests in your garden.
+            </p>
+            <p id="shampoo">
+                <bold> Alternative:</bold> The first solution would be to opt for a DIY pesticide. Many can be found <a href="https://www.motherearthliving.com/in-the-garden/eco-friendly-diy-pesticides-zbz1806/">here.</a>
+                A second option would be to introduce plants that deter pests on their own or attract certain bugs who either repel or prey on common pests in your garden. Find a good list
+                <a href="https://www.treehugger.com/plants-that-repel-unwanted-insects-4864336">here.</a>
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,94 @@
+﻿@{
+    ViewData["Title"] = "Common Products";
+}
+<h1>@ViewData["Title"]</h1>
+<!DOCTYPE html>
+
+<head>
+    <link href="~/Content/styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<header>
+</header>
+<style>
+    #shampoo {
+        position: relative;
+        background-color: white;
+        border-radius: 25px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        font-family: Garamond, serif;
+        font-size: 16px;
+        padding: 40px 40px;
+        top: 10px
+    }
+
+    #subtitle {
+        position: relative;
+        font-family: Garamond, serif;
+        font-size: 18px;
+        font-weight: bold;
+        left: 50px;
+        top: 15px;
+    }
+
+    #pic {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        position: relative;
+        top: 35px;
+        left: 50px;
+        height: 325px;
+        width: 70%;
+    }
+    row {
+        position: relative;
+        top: 15px;
+    }
+
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <input id="button" type="button" value="Return" onclick="@("window.location.href='" + @Url.Action("Bath", "Home") + "'");" />
+        </div>
+        <div class="col d-flex justify-content-center">
+            <input id="button" type="button" value="Next" onclick="@("window.location.href='" + @Url.Action("Sundries", "Bathroom") + "'");" />
+        </div>
+    </div>
+    <p></p>
+    <p></p>
+    <div class="row">
+        <div class="col-md">
+            <header id="subtitle"> Shampoo and Conditioner Alternatives</header>
+            <img id="pic" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Bar_shampoo.jpg" class="rounded float-left" alt="Bar Shampoo">
+        </div>
+        <div class="col-md">
+            <p id="shampoo">
+                Shampoo and conditioners are commmonly stored in single use
+                plastics that take hundreds of years to decompose. Many of these products also contain ingredients harmful
+                to you and the environment. Not only that, but shampoos and conditioners are 75-90% water which requires the concentration
+                of harmful chemicals in your products to be high!
+            </p>
+            <p id="shampoo">
+                <bold> Alternative:</bold> Ditch the plastic and consider bar shampoo and conditioner! Most bar shampoos and
+                conditioners come in sustainable packaging. They also contain natural ingredients that are extremely nourishing
+                for your hair. Because bar shampoos are megaconcentrated and you add your own water, expect them to last
+                for several months!
+            </p>
+        </div>
+    </div>
+    <p></p>
+    </div>
+    <!--  <div class="row">
+         <div class="col-md">
+              <header id="subtitle"> Hair Oils and Masks</header>
+              <img id="pic" src="..." class="rounded float-left" alt="...">
+          </div>
+          <div class="col-md">
+              <p id="shampoo">
+                  why its bad
+              </p>
+              <p id="shampoo">
+                  <bold> Alternative:</bold> tbd
+          </div>
+      </div>
+      </div> -->
